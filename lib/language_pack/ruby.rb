@@ -822,7 +822,7 @@ params = CGI.parse(uri.query || "")
   def run_docs_generate_rake_task
     instrument 'ruby.run_docs_generate_rake_task' do
 
-      docs_generate = rake.task("docs:generate")
+      docs_generate = rake.task("docs:generate:ordered")
       return true unless docs_generate.is_defined?
 
       topic "Generating documentation"
